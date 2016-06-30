@@ -1,0 +1,9 @@
+version: '2'
+services:
+  alpine-nodemon:
+    ports:
+      - 8080:8080
+    image: alpine-nodemon:latest
+    volumes:
+      - ./src:/service/src
+    command: npm run dev
