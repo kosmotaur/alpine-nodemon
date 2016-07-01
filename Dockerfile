@@ -1,6 +1,4 @@
-FROM mhart/alpine-node:6.2.2
-
-WORKDIR root
+FROM hub.noths.com/node:6-alpine
 
 ENV HOME /service
 WORKDIR $HOME
@@ -13,4 +11,5 @@ RUN cd /tmp && \
 COPY . $HOME
 EXPOSE 8080
 
+ENV NODE_ENV production
 CMD ["npm", "start"]

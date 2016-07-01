@@ -7,3 +7,12 @@ services:
     volumes:
       - ./src:/service/src
     command: npm run dev
+    environment:
+      - HTTP_PROXY=http://dependencies:8500
+      - NODE_ENV=
+    links:
+      - dependencies
+  dependencies:
+    image: foo-dependencies:latest
+    ports:
+      - 8888:8888

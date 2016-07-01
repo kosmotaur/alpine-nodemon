@@ -4,7 +4,7 @@
   "description": "Test case for file watching in alpine-node",
   "main": "index.js",
   "scripts": {
-    "start-dev": "./node_modules/babel-cli/bin/babel-node.js --debug ./scripts/start.js --config ./config/defaults.json --config ./config/application.json --dev",
+    "start-dev": "./node_modules/babel-cli/bin/babel-node.js --debug ./scripts/start.js",
     "dev": "./node_modules/nodemon/bin/nodemon.js --watch src -e js --ignore lib --exec npm run start-dev"
   },
   "keywords": [],
@@ -16,6 +16,7 @@
     "nodemon": "1.9.2"
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "request": "^2.72.0"
   }
 }

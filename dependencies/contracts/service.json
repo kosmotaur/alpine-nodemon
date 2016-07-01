@@ -1,0 +1,15 @@
+{
+  "data": [
+    {
+      "response": {
+        "status": 202,
+        "body": "{\"foo\":\"baz\"}"
+      },
+      "request": {
+        "path": "/api/foo",
+        "method": "GET",
+        "destination": "api-service"
+      }
+    }
+  ]
+}
