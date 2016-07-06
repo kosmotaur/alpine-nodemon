@@ -1,6 +1,9 @@
 version: '2'
+
 services:
   alpine-nodemon:
+    build:
+      context: .
     ports:
       - 8080:8080
     image: alpine-nodemon:latest
@@ -13,6 +16,8 @@ services:
     links:
       - dependencies
   dependencies:
-    image: foo-dependencies:latest
+    build:
+      context: ./dependencies
+    image: dependencies:latest
     ports:
       - 8888:8888
